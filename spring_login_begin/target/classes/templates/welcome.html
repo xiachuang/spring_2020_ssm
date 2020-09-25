@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<!--4-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 align="center">欢迎光临</h1>
+<div sec:authorize="!isAuthenticated()">
+	<h2 align="center">您好<a th:href="@{/userLogin}">请登录</a></h2>
+</div>
+<div sec:authorize="isAuthenticated()">
+	<span sec:authentication="name"></span>
+<!--		<span sec:authentication="principal.authorities"></span></h2>-->
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="注销"/>
+	</form>
+</div>
+<hr>
+<div sec:authorize="hasRole('VIP')">
+	<h3>VIP</h3>
+	<ul>
+		<li><a th:href="@{spring/open}">首页操作</a></li><br>
+		<li><a th:href="@{spring/own}">个人中心</a></li><br>
+		<li><a th:href="@{spring/vip/vipView}">VIP特权</a> </li>
+		</ul>
+	</div>
+<div>
+	<h3>普通用户</h3>
+	<ul>
+		<li><a th:href="@{spring/open}">首页操作</a></li><br>
+		<li><a th:href="@{spring/own}">个人中心</a></li><br>
+
+	</ul>
+</div>
+</div>
+<div ><a th:href="@{/insertUser}">注册</a></div>
+<!--<p style="color: red" th:if="${not #strings.isEmpty(msg)}" th:text="{msg}"></p>-->
+<!--/*@thymesVar id="msg" type=""*/-->
+<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+</body>
+</html>
