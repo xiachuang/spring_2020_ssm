@@ -1,20 +1,17 @@
 package com.xia;
 
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableEurekaClient
 @EnableTransactionManagement
-public class SpringSsmPay9001Application {
+public class SpringSsmPay9002Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringSsmPay9001Application.class, args);
-
-        }
-
+        SpringApplication.run(SpringSsmPay9002Application.class, args);
+    }
 
 }

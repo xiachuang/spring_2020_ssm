@@ -1,18 +1,13 @@
 package com.xia.service.impl;
 
 import com.xia.bean.Customer;
-
 import com.xia.repository.CustomerRepository;
 import com.xia.service.IPayService;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 @Transactional

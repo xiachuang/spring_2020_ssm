@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xia</groupId>
-    <artifactId>spring_ssm_pay9001</artifactId>
+    <artifactId>spring_ssm_pay9002</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring_ssm_pay9001</name>
+    <name>spring_ssm_pay9002</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -32,10 +32,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -46,7 +46,7 @@
             <version>5.1.6</version>
             <scope>runtime</scope>
         </dependency>
-<!--        工具包-->
+        <!--        工具包-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>

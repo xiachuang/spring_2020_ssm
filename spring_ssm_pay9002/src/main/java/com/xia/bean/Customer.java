@@ -2,7 +2,6 @@ package com.xia.bean;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Entity
 @Table(name = "customer")
